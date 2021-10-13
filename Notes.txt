@@ -1,0 +1,33 @@
+Golang tool creation. Starting with a crawler then moving to a scraper.
+
+!!!!!!!!!!!!!!!! learning Golang !!!!!!!!!!!!!!!!
+libraries? === No libraries, Packages
+package democrawl
+
+import (
+	"fmt"
+	"net/http"
+	"net/url"
+	"strings"
+
+	"github.com/PuerkitoBio/goquery"
+)
+
+type ScrapeResult struct {
+	URL   string
+	Title string
+	H1    string
+}
+
+type Parser interface {
+	ParsePage(*goquery.Document) ScrapeResult
+}
+imports ==  are inside the packages as first line staggered between ()
+
+functions YES functions are the magic
+objects YES passed with arrays [] or assigned to vars var =
+logic only for loops inside packages. however you can loop into other functions.
+
+deployability === yes can be deployed to any golang environment that matches the current golang version.
+
+passing user input and files through go will have to be another module completely.
